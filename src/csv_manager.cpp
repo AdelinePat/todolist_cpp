@@ -15,7 +15,7 @@ void create_file() {
     }
 }
 
-void write_in_todo_list(std::string_view user_entry) {
+void add_into_todo_list(std::string_view user_entry) {
     create_file();
     std::ofstream todo_file{FILE_PATH, std::ofstream::app};
     if (!todo_file) {
@@ -24,6 +24,20 @@ void write_in_todo_list(std::string_view user_entry) {
     }
     todo_file << user_entry << endl;
     cout<<"Votre tâche a bien été ajouté !"<<endl;
+}
+
+void overwrite_todo_list(std::vector<Task>& tasks_list) {
+    std::ofstream todo_file{FILE_PATH, std::ofstream::out};
+    if (!todo_file) {
+        cerr<<"Le fichier n'a pas pu s'ouvrir en mode ajout"<<endl;
+        return;
+    }
+    todo_file << "Tâche;Date;Etat\n";
+    for (Task a_task : tasks_list) {
+        todo_file << a_task.description << ";" << a_task.deadline << ";" << a_task.state << endl;
+    }
+    // todo_file << user_entry << endl;
+    cout<<"Votre liste a bien été mise à jour !"<<endl;
 }
 
 void get_todo_list(std::vector<Task>& tasks_list) {
@@ -46,6 +60,10 @@ void get_todo_list(std::vector<Task>& tasks_list) {
 }
 
 
+
+// void save_change(std::vector<Task>& tasks_list) {
+//     bidule;
+// }
 // void change_task_status() {
 
 // }
