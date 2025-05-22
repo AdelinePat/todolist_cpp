@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/Adeline/Documents/C++/todolist_cpp/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -o CMakeFiles\\TODO.dir\\src\\main.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\main.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\main.cpp",
+  "output": "CMakeFiles\\TODO.dir\\src\\main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Adeline/Documents/C++/todolist_cpp/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -o CMakeFiles\\TODO.dir\\src\\csv_manager.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\csv_manager.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\csv_manager.cpp",
+  "output": "CMakeFiles\\TODO.dir\\src\\csv_manager.cpp.obj"
+},
+{
+  "directory": "C:/Users/Adeline/Documents/C++/todolist_cpp/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -o CMakeFiles\\TODO.dir\\src\\utils.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\utils.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\utils.cpp",
+  "output": "CMakeFiles\\TODO.dir\\src\\utils.cpp.obj"
+}
+]

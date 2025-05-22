@@ -1,0 +1,5 @@
+C:/Users/Adeline/Documents/C++/todolist_cpp/build/CMakeFiles/TODO.dir
+C:/Users/Adeline/Documents/C++/todolist_cpp/build/CMakeFiles/package.dir
+C:/Users/Adeline/Documents/C++/todolist_cpp/build/CMakeFiles/package_source.dir
+C:/Users/Adeline/Documents/C++/todolist_cpp/build/CMakeFiles/edit_cache.dir
+C:/Users/Adeline/Documents/C++/todolist_cpp/build/CMakeFiles/rebuild_cache.dir
