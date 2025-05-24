@@ -36,7 +36,6 @@ void OverwriteTodoList(std::vector<Task>& tasks_list) {
     for (Task a_task : tasks_list) {
         todo_file << a_task.description << ";" << a_task.deadline << ";" << a_task.state << endl;
     }
-    // todo_file << user_entry << endl;
     cout<<"Votre liste a bien été mise à jour !"<<endl;
 }
 

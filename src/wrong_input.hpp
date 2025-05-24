@@ -25,3 +25,15 @@ class WrongDate : public std::exception {
         return message.c_str();
     }
 };
+
+class WrongCommand : public std::exception {
+    private:
+        std::string message;
+
+    public:
+    WrongCommand(const std::string& msg) : message(msg) {}
+
+    const char* what() const noexcept override {
+        return message.c_str();
+    }
+};

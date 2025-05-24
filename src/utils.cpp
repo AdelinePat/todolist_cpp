@@ -13,4 +13,3 @@ std::vector<std::string> splitString(std::string& current_string) {
         all_strings.push_back(current_string.substr(start));
         return all_strings;
 }
-

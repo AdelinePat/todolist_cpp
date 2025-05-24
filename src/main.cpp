@@ -5,8 +5,9 @@
 int main(int argc, char const *argv[])
 {
     std::filesystem::current_path("C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp");
+     
 
-    std::cout << "Working directory: " << std::filesystem::current_path() << "\n\n";
+    // std::cout << "Working directory: " << std::filesystem::current_path() << "\n\n";
     std::setlocale(LC_ALL, ".utf8");
     struct Task task;
     int user_choice{0};

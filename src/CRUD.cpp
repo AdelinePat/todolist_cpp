@@ -4,6 +4,9 @@ void changeTaskState(std::vector<Task>& tasks_list, int index) {
     tasks_list[index].state ? tasks_list[index].state = 0 : tasks_list[index].state = 1;
 }
 
+void changeTaskPtr(std::vector<Task>& tasks_list, int index, void (*choice)(Task& task)) {
+    choice(tasks_list[index]);
+}
 // Use a function pointer for this ?? Could be a good exercise
 void changeTask(std::vector<Task>& tasks_list, int index, int choice) {
     switch (choice) {

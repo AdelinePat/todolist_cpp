@@ -19,6 +19,8 @@ void isDateCoherent(std::string &date_input);
 
 void CleanDescriptionTask(std::string &description_task);
 
+bool isOnlyWhitespace(std::string &description_task);
+
 #endif
 
 
