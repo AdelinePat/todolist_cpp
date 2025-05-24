@@ -49,11 +49,19 @@ cmake_ninja_workdir = C$:/Users/Adeline/Documents/C++/todolist_cpp/build/
 
 build cmake_object_order_depends_target_TODO: phony || .
 
-build CMakeFiles/TODO.dir/src/main.cpp.obj: CXX_COMPILER__TODO_unscanned_Debug C$:/Users/Adeline/Documents/C++/todolist_cpp/src/main.cpp || cmake_object_order_depends_target_TODO
+build CMakeFiles/TODO.dir/src/choice_redirection.cpp.obj: CXX_COMPILER__TODO_unscanned_Debug C$:/Users/Adeline/Documents/C++/todolist_cpp/src/choice_redirection.cpp || cmake_object_order_depends_target_TODO
   CONFIG = Debug
   DEFINES = -DDEBUG_MODE
-  DEP_FILE = CMakeFiles\TODO.dir\src\main.cpp.obj.d
-  FLAGS = -g
+  DEP_FILE = CMakeFiles\TODO.dir\src\choice_redirection.cpp.obj.d
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\TODO.dir
+  OBJECT_FILE_DIR = CMakeFiles\TODO.dir\src
+
+build CMakeFiles/TODO.dir/src/CRUD.cpp.obj: CXX_COMPILER__TODO_unscanned_Debug C$:/Users/Adeline/Documents/C++/todolist_cpp/src/CRUD.cpp || cmake_object_order_depends_target_TODO
+  CONFIG = Debug
+  DEFINES = -DDEBUG_MODE
+  DEP_FILE = CMakeFiles\TODO.dir\src\CRUD.cpp.obj.d
+  FLAGS = -g -std=gnu++20
   OBJECT_DIR = CMakeFiles\TODO.dir
   OBJECT_FILE_DIR = CMakeFiles\TODO.dir\src
 
@@ -61,7 +69,31 @@ build CMakeFiles/TODO.dir/src/csv_manager.cpp.obj: CXX_COMPILER__TODO_unscanned_
   CONFIG = Debug
   DEFINES = -DDEBUG_MODE
   DEP_FILE = CMakeFiles\TODO.dir\src\csv_manager.cpp.obj.d
-  FLAGS = -g
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\TODO.dir
+  OBJECT_FILE_DIR = CMakeFiles\TODO.dir\src
+
+build CMakeFiles/TODO.dir/src/display.cpp.obj: CXX_COMPILER__TODO_unscanned_Debug C$:/Users/Adeline/Documents/C++/todolist_cpp/src/display.cpp || cmake_object_order_depends_target_TODO
+  CONFIG = Debug
+  DEFINES = -DDEBUG_MODE
+  DEP_FILE = CMakeFiles\TODO.dir\src\display.cpp.obj.d
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\TODO.dir
+  OBJECT_FILE_DIR = CMakeFiles\TODO.dir\src
+
+build CMakeFiles/TODO.dir/src/main.cpp.obj: CXX_COMPILER__TODO_unscanned_Debug C$:/Users/Adeline/Documents/C++/todolist_cpp/src/main.cpp || cmake_object_order_depends_target_TODO
+  CONFIG = Debug
+  DEFINES = -DDEBUG_MODE
+  DEP_FILE = CMakeFiles\TODO.dir\src\main.cpp.obj.d
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\TODO.dir
+  OBJECT_FILE_DIR = CMakeFiles\TODO.dir\src
+
+build CMakeFiles/TODO.dir/src/sanitize_input.cpp.obj: CXX_COMPILER__TODO_unscanned_Debug C$:/Users/Adeline/Documents/C++/todolist_cpp/src/sanitize_input.cpp || cmake_object_order_depends_target_TODO
+  CONFIG = Debug
+  DEFINES = -DDEBUG_MODE
+  DEP_FILE = CMakeFiles\TODO.dir\src\sanitize_input.cpp.obj.d
+  FLAGS = -g -std=gnu++20
   OBJECT_DIR = CMakeFiles\TODO.dir
   OBJECT_FILE_DIR = CMakeFiles\TODO.dir\src
 
@@ -69,7 +101,7 @@ build CMakeFiles/TODO.dir/src/utils.cpp.obj: CXX_COMPILER__TODO_unscanned_Debug 
   CONFIG = Debug
   DEFINES = -DDEBUG_MODE
   DEP_FILE = CMakeFiles\TODO.dir\src\utils.cpp.obj.d
-  FLAGS = -g
+  FLAGS = -g -std=gnu++20
   OBJECT_DIR = CMakeFiles\TODO.dir
   OBJECT_FILE_DIR = CMakeFiles\TODO.dir\src
 
@@ -81,7 +113,7 @@ build CMakeFiles/TODO.dir/src/utils.cpp.obj: CXX_COMPILER__TODO_unscanned_Debug 
 #############################################
 # Link the executable TODO.exe
 
-build TODO.exe: CXX_EXECUTABLE_LINKER__TODO_Debug CMakeFiles/TODO.dir/src/main.cpp.obj CMakeFiles/TODO.dir/src/csv_manager.cpp.obj CMakeFiles/TODO.dir/src/utils.cpp.obj
+build TODO.exe: CXX_EXECUTABLE_LINKER__TODO_Debug CMakeFiles/TODO.dir/src/choice_redirection.cpp.obj CMakeFiles/TODO.dir/src/CRUD.cpp.obj CMakeFiles/TODO.dir/src/csv_manager.cpp.obj CMakeFiles/TODO.dir/src/display.cpp.obj CMakeFiles/TODO.dir/src/main.cpp.obj CMakeFiles/TODO.dir/src/sanitize_input.cpp.obj CMakeFiles/TODO.dir/src/utils.cpp.obj
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

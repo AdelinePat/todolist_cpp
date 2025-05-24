@@ -1,19 +1,43 @@
 [
 {
   "directory": "C:/Users/Adeline/Documents/C++/todolist_cpp/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -o CMakeFiles\\TODO.dir\\src\\main.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\main.cpp",
-  "file": "C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\main.cpp",
-  "output": "CMakeFiles\\TODO.dir\\src\\main.cpp.obj"
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -std=gnu++20 -o CMakeFiles\\TODO.dir\\src\\choice_redirection.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\choice_redirection.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\choice_redirection.cpp",
+  "output": "CMakeFiles\\TODO.dir\\src\\choice_redirection.cpp.obj"
 },
 {
   "directory": "C:/Users/Adeline/Documents/C++/todolist_cpp/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -o CMakeFiles\\TODO.dir\\src\\csv_manager.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\csv_manager.cpp",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -std=gnu++20 -o CMakeFiles\\TODO.dir\\src\\CRUD.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\CRUD.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\CRUD.cpp",
+  "output": "CMakeFiles\\TODO.dir\\src\\CRUD.cpp.obj"
+},
+{
+  "directory": "C:/Users/Adeline/Documents/C++/todolist_cpp/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -std=gnu++20 -o CMakeFiles\\TODO.dir\\src\\csv_manager.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\csv_manager.cpp",
   "file": "C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\csv_manager.cpp",
   "output": "CMakeFiles\\TODO.dir\\src\\csv_manager.cpp.obj"
 },
 {
   "directory": "C:/Users/Adeline/Documents/C++/todolist_cpp/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -o CMakeFiles\\TODO.dir\\src\\utils.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\utils.cpp",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -std=gnu++20 -o CMakeFiles\\TODO.dir\\src\\display.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\display.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\display.cpp",
+  "output": "CMakeFiles\\TODO.dir\\src\\display.cpp.obj"
+},
+{
+  "directory": "C:/Users/Adeline/Documents/C++/todolist_cpp/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -std=gnu++20 -o CMakeFiles\\TODO.dir\\src\\main.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\main.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\main.cpp",
+  "output": "CMakeFiles\\TODO.dir\\src\\main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Adeline/Documents/C++/todolist_cpp/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -std=gnu++20 -o CMakeFiles\\TODO.dir\\src\\sanitize_input.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\sanitize_input.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\sanitize_input.cpp",
+  "output": "CMakeFiles\\TODO.dir\\src\\sanitize_input.cpp.obj"
+},
+{
+  "directory": "C:/Users/Adeline/Documents/C++/todolist_cpp/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DDEBUG_MODE -g -std=gnu++20 -o CMakeFiles\\TODO.dir\\src\\utils.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\utils.cpp",
   "file": "C:\\Users\\Adeline\\Documents\\C++\\todolist_cpp\\src\\utils.cpp",
   "output": "CMakeFiles\\TODO.dir\\src\\utils.cpp.obj"
 }

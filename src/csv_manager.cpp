@@ -1,6 +1,6 @@
 #include "csv_manager.hpp"
 
-void create_file() {
+void createFile() {
     bool file_exists = std::filesystem::exists(FILE_PATH);
     if (!file_exists) {
         cout<<"FILE_PATH = "<<FILE_PATH<<endl;
@@ -15,8 +15,8 @@ void create_file() {
     }
 }
 
-void add_into_todo_list(std::string_view user_entry) {
-    create_file();
+void addIntoTodoList(std::string_view user_entry) {
+    createFile();
     std::ofstream todo_file{FILE_PATH, std::ofstream::app};
     if (!todo_file) {
         cerr<<"Le fichier n'a pas pu s'ouvrir en mode ajout"<<endl;
@@ -26,7 +26,7 @@ void add_into_todo_list(std::string_view user_entry) {
     cout<<"Votre tâche a bien été ajouté !"<<endl;
 }
 
-void overwrite_todo_list(std::vector<Task>& tasks_list) {
+void OverwriteTodoList(std::vector<Task>& tasks_list) {
     std::ofstream todo_file{FILE_PATH, std::ofstream::out};
     if (!todo_file) {
         cerr<<"Le fichier n'a pas pu s'ouvrir en mode ajout"<<endl;
@@ -40,7 +40,7 @@ void overwrite_todo_list(std::vector<Task>& tasks_list) {
     cout<<"Votre liste a bien été mise à jour !"<<endl;
 }
 
-void get_todo_list(std::vector<Task>& tasks_list) {
+void getTodoList(std::vector<Task>& tasks_list) {
     std::ifstream todo_file{FILE_PATH, std::ios::in};
     if (!todo_file) {
         cerr<<"Le fichier n'a pas pu s'ouvrir en mode lecture";
@@ -48,7 +48,7 @@ void get_todo_list(std::vector<Task>& tasks_list) {
     }
     std::string row;
     while (std::getline(todo_file, row)) {
-        std::vector<std::string> my_current_string = split_string(row);
+        std::vector<std::string> my_current_string = splitString(row);
         Task a_task;
         if (my_current_string.at(2) != "Etat") {
             a_task.description = my_current_string.at(0);
@@ -58,12 +58,3 @@ void get_todo_list(std::vector<Task>& tasks_list) {
         } 
     }
 }
-
-
-
-// void save_change(std::vector<Task>& tasks_list) {
-//     bidule;
-// }
-// void change_task_status() {
-
-// }
