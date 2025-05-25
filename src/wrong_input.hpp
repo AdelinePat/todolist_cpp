@@ -1,3 +1,5 @@
+#ifndef __CUSTOM_EXCEPTIONS__
+#define __CUSTOM_EXCEPTIONS__
 #include <exception>
 #include <string>
 #include <iostream>
@@ -37,3 +39,5 @@ class WrongCommand : public std::exception {
         return message.c_str();
     }
 };
+
+#endif

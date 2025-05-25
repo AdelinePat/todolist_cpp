@@ -13,7 +13,7 @@ void redirectChoice(int user_choice, Task& task, std::vector<Task>& tasks_list) 
             swapStatus(tasks_list);
             break;
         case 3:
-            modifyTask(user_choice, tasks_list);
+            modifyTask(tasks_list);
             break;
         case 4:
             deleteTask(user_choice, tasks_list);
@@ -23,6 +23,7 @@ void redirectChoice(int user_choice, Task& task, std::vector<Task>& tasks_list) 
         default:
             cout<<"Qu'est-ce à dire que ceci ?"<<endl;
     }
+
 }
 
 void createTask(Task& task, std::vector<Task>& tasks_list) {
@@ -35,32 +36,45 @@ void createTask(Task& task, std::vector<Task>& tasks_list) {
 }
 
 void swapStatus(std::vector<Task>& tasks_list) {
-    cout<<"Veuillez renseigner le numéro de la tâche qui doit changer de status : ";
-    int index_choice{0};
-    cin>>index_choice;
-    changeTaskState(tasks_list, index_choice-1);
-    OverwriteTodoList(tasks_list);
+    try {
+        int index_choice = getStrInputReturnsInt("Veuillez renseigner le numéro de la tâche qui doit changer de status : ");
+        changeTaskState(tasks_list, index_choice-1);
+        OverwriteTodoList(tasks_list);
+    } 
+    catch (const WrongCommand& e) {
+        cout<<e.what()<<endl;
+        swapStatus(tasks_list);
+    }
 }
 
-void modifyTask(int choice, std::vector<Task>& tasks_list) {
-    cout<<"Veuillez renseigner le numéro de la tâche qui doit être modifiée : ";
-    int index_choice{0};
-    cin>>index_choice;
-    cout<<"Veuillez écrire :\n0 : pour changer la description,\n1 : pour changer la date butoir."<<endl;
-    cin>>choice;
-    if (choice == 0) {
-        changeTaskPtr(tasks_list, index_choice-1, askForDescription);
-    } else {
-        changeTaskPtr(tasks_list, index_choice, askForDate);
+void modifyTask(std::vector<Task>& tasks_list) {
+    try {
+        int index_choice = getStrInputReturnsInt("Veuillez renseigner le numéro de la tâche qui doit être modifiée : ");
+        int choice = getStrInputReturnsInt("Veuillez écrire :\n0 : pour changer la description,\n1 : pour changer la date butoir.");
+        cout<<"Contenu à modifier : "<<endl;
+        switch (choice) {
+            case 0:  
+                cout<<tasks_list[index_choice-1].description<<endl;
+                changeTask(tasks_list, index_choice-1, askForDescription);
+                break;
+            case 1:
+                cout<<tasks_list[index_choice].deadline<<endl;
+                changeTask(tasks_list, index_choice, askForDate);
+                break;
+            default:
+                cout<<"La commande n'a pas été reconnue : veuillez recommencer"<<endl;
+                modifyTask(tasks_list);
+        }
+        OverwriteTodoList(tasks_list);
     }
-    // changeTask(tasks_list, index_choice-1, choice);
-    OverwriteTodoList(tasks_list);
+    catch (const WrongCommand& e) {
+        cout<<e.what()<<endl;
+        modifyTask(tasks_list);
+    }
 }
 
 void deleteTask(int choice, std::vector<Task>& tasks_list) {
-    int index_choice{0};
-    cout<<"Veuillez renseigner le numéro de la tâche à supprimer : ";
-    cin>>index_choice;
+    int index_choice = getStrInputReturnsInt("Veuillez renseigner le numéro de la tâche à supprimer : ");
     deleteTaskFromVector(tasks_list, index_choice-1);
     OverwriteTodoList(tasks_list);
 }

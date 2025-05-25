@@ -28,14 +28,13 @@ void displayTask(std::vector<Task>& tasks_list) {
         std::string description_border(description_length, ' ');
         std::string deadline_border(deadline_length, ' ');
         std::string status_border(status_length, ' ');
-        std::string final_description_string{"| " + tasks_list[index].description + description_border + " |"};
+        // std::string final_description_string{"| " + tasks_list[index].description + description_border + " |"};
 
-        int descr_size = tasks_list[index].description.size();
-        int size = final_description_string.size();
+        // int descr_size = tasks_list[index].description.size();
+        // int size = final_description_string.size();
 
         cout<<top_border<<" Tâche n°"<<index+1<<" "<<top_border<<endl;
-        // cout<<"| "<<tasks_list[index].description<<description_border<<" |"<<endl;
-        cout<<final_description_string<<endl;
+        cout<<"| "<<tasks_list[index].description<<description_border<<" |"<<endl;
         cout<<"| "<<tasks_list[index].deadline<<deadline_border<<" |"<<endl;
         cout<<"| "<<"Etat : "<<(tasks_list[index].state ? "Terminée " : "En cours ")<<status_border<<" |"<<endl;
         cout<<bottom_border<<endl<<endl;
@@ -47,7 +46,7 @@ void displayTask(std::vector<Task>& tasks_list) {
     }
 }
 
-int displayMenu(int user_choice) {
+std::string displayMenu(std::string& user_choice) {
     cout<<"####################################"<<endl;
     cout<<"0. Quitter\n"<<
     "1. Créer une nouvelle tâche\n"<<

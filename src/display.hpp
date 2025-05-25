@@ -4,6 +4,6 @@
 
 void displayTask(std::vector<Task> &tasks_list);
 
-int displayMenu(int user_choice);
+std::string displayMenu(std::string& user_choice);
 
 #endif

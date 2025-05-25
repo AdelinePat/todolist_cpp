@@ -13,3 +13,28 @@ std::vector<std::string> splitString(std::string& current_string) {
         all_strings.push_back(current_string.substr(start));
         return all_strings;
 }
+
+int parseCommand(const std::string& input) {
+    std::stringstream string_stream(input);
+    int choice;
+    if (string_stream >> choice && string_stream.eof()) {
+        return choice;
+    } else {
+        throw WrongCommand("Commande invalide : entrée non numérique.");
+    }
+}
+
+int getStrInputReturnsInt(std::string_view prompt_string) {
+    try {
+        cout<<prompt_string<<endl;
+        std::string choice_str{""};
+        int choice{0};
+        cin>>choice_str;
+        choice = parseCommand(choice_str);
+        return choice;
+    }
+    catch (const WrongCommand& e) {
+        cout<<e.what()<<endl;
+        return getStrInputReturnsInt(prompt_string);       
+    }
+}

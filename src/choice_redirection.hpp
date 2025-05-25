@@ -11,7 +11,7 @@ void createTask(Task &task, std::vector<Task> &tasks_list);
 
 void swapStatus(std::vector<Task> &tasks_list);
 
-void modifyTask(int choice, std::vector<Task> &tasks_list);
+void modifyTask(std::vector<Task> &tasks_list);
 
 void deleteTask(int choice, std::vector<Task> &tasks_list);
 

@@ -1,10 +1,11 @@
-
 #ifndef __UTILS__
 #define __UTILS__
 #include <iostream>
 #include <string>
 #include <string_view>
 #include <vector>
+#include <sstream>
+#include "wrong_input.hpp"
 
 using std::cout;
 using std::cin;
@@ -19,5 +20,8 @@ struct Task {
 
 std::vector<std::string> splitString(std::string &current_string);
 
+int parseCommand(const std::string &input);
+
+int getStrInputReturnsInt(std::string_view prompt_string);
 
 #endif
