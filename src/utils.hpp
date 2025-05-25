@@ -15,7 +15,7 @@ struct Task {
     std::string description{""};
     std::string deadline{""};
     std::string final_string{""};
-    int state{0};
+    bool state{false};
 };
 
 std::vector<std::string> splitString(std::string &current_string);

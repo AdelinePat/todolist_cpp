@@ -1,7 +1,7 @@
 #include "CRUD.hpp"
 
 void changeTaskState(std::vector<Task>& tasks_list, int index) {
-    tasks_list[index].state ? tasks_list[index].state = 0 : tasks_list[index].state = 1;
+    tasks_list[index].state ? tasks_list[index].state = false : tasks_list[index].state = true;
 }
 
 void changeTask(std::vector<Task>& tasks_list, int index, void (*choice)(Task& task)) {

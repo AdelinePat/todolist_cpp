@@ -52,7 +52,7 @@ void getTodoList(std::vector<Task>& tasks_list) {
         if (my_current_string.at(2) != "Etat") {
             a_task.description = my_current_string.at(0);
             a_task.deadline = my_current_string.at(1);
-            a_task.state = std::stoi(my_current_string.at(2));
+            a_task.state = static_cast<bool>(std::stoi(my_current_string.at(2)));
             tasks_list.emplace_back(a_task);
         } 
     }
