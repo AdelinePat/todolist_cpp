@@ -13,7 +13,7 @@ void swapStatus(std::vector<Task> &tasks_list);
 
 void modifyTask(std::vector<Task> &tasks_list);
 
-void deleteTask(int choice, std::vector<Task> &tasks_list);
+void deleteTask(std::vector<Task> &tasks_list);
 
 void askForDescription(Task &task);
 

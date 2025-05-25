@@ -14,7 +14,7 @@ void redirectChoice(int user_choice, Task& task, std::vector<Task>& tasks_list) 
             modifyTask(tasks_list);
             break;
         case 4:
-            deleteTask(user_choice, tasks_list);
+            deleteTask(tasks_list);
             break;
         case 0:
             break;
@@ -36,10 +36,17 @@ void createTask(Task& task, std::vector<Task>& tasks_list) {
 void swapStatus(std::vector<Task>& tasks_list) {
     try {
         int index_choice = getStrInputReturnsInt("Veuillez renseigner le numéro de la tâche qui doit changer de status : ");
+        if (index_choice < 1 || index_choice > tasks_list.size()) {
+            throw WrongInput("Le numéro de la tâche demandé n'existe pas.");
+        }
         changeTaskState(tasks_list, index_choice-1);
         OverwriteTodoList(tasks_list);
     } 
     catch (const WrongCommand& e) {
+        cout<<e.what()<<endl;
+        swapStatus(tasks_list);
+    } 
+    catch (const WrongInput& e) {
         cout<<e.what()<<endl;
         swapStatus(tasks_list);
     }
@@ -48,6 +55,9 @@ void swapStatus(std::vector<Task>& tasks_list) {
 void modifyTask(std::vector<Task>& tasks_list) {
     try {
         int index_choice = getStrInputReturnsInt("Veuillez renseigner le numéro de la tâche qui doit être modifiée : ");
+        if (index_choice < 1 || index_choice > tasks_list.size()) {
+            throw WrongInput("Le numéro de la tâche demandé n'existe pas.");
+        }
         int choice = getStrInputReturnsInt("Veuillez écrire :\n0 : pour changer la description,\n1 : pour changer la date butoir.");
         cout<<"Contenu à modifier : "<<endl;
         switch (choice) {
@@ -69,12 +79,25 @@ void modifyTask(std::vector<Task>& tasks_list) {
         cout<<e.what()<<endl;
         modifyTask(tasks_list);
     }
+    catch (const WrongInput& e) {
+        cout<<e.what()<<endl;
+        modifyTask(tasks_list);
+    }
 }
 
-void deleteTask(int choice, std::vector<Task>& tasks_list) {
-    int index_choice = getStrInputReturnsInt("Veuillez renseigner le numéro de la tâche à supprimer : ");
-    deleteTaskFromVector(tasks_list, index_choice-1);
-    OverwriteTodoList(tasks_list);
+void deleteTask(std::vector<Task>& tasks_list) {
+    try {
+        int index_choice = getStrInputReturnsInt("Veuillez renseigner le numéro de la tâche à supprimer : ");
+        if (index_choice < 1 || index_choice > tasks_list.size()) {
+            throw WrongInput("Le numéro de la tâche demandé n'existe pas.");
+        }
+        deleteTaskFromVector(tasks_list, index_choice-1);
+        OverwriteTodoList(tasks_list);
+    }
+    catch (const WrongInput& e) {
+        cout<<e.what()<<endl;
+        deleteTask(tasks_list);
+    }
 }
 
 void askForDescription(Task& task) {

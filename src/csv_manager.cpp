@@ -23,6 +23,7 @@ void addIntoTodoList(std::string_view user_entry) {
         return;
     }
     todo_file << user_entry << endl;
+    todo_file.close();
     cout<<"Votre tâche a bien été ajouté !"<<endl;
 }
 
@@ -36,6 +37,7 @@ void OverwriteTodoList(std::vector<Task>& tasks_list) {
     for (Task a_task : tasks_list) {
         todo_file << a_task.description << ";" << a_task.deadline << ";" << a_task.state << endl;
     }
+    todo_file.close();
     cout<<"Votre liste a bien été mise à jour !"<<endl;
 }
 
@@ -56,4 +58,5 @@ void getTodoList(std::vector<Task>& tasks_list) {
             tasks_list.emplace_back(a_task);
         } 
     }
+    todo_file.close();
 }
