@@ -2,8 +2,6 @@
 #include "wrong_input.hpp"
 
 void redirectChoice(int user_choice, Task& task, std::vector<Task>& tasks_list) {
-    // int (*dateInputPtr)() = askForDate;
-    // int (*descriptionInputPtr)() = askForDescription;
     int choice{0};
     switch (user_choice) {
         case 1:

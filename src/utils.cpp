@@ -38,3 +38,15 @@ int getStrInputReturnsInt(std::string_view prompt_string) {
         return getStrInputReturnsInt(prompt_string);       
     }
 }
+
+std::string stringPattern(int count) {
+    std::string string_pattern;
+    for (int i{0}; i < count; i++) {
+        if (i%2 == 0) {
+            string_pattern += '-';
+        } else {
+            string_pattern += ' ';
+        }
+    }
+    return string_pattern;
+}
